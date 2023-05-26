@@ -3,6 +3,7 @@ And thanks for all the fish!
 
 ### MAP HANDLING
 |to-do|status|
+| --- | --- |
 |get the map into a char **||
 |check if its a good map:||
 |check if there is at least one path||
@@ -12,6 +13,7 @@ And thanks for all the fish!
 
 ### IMAGES CREATION AND SHOWING
 |to-do|status|
+| --- | --- |
 |choose the theme im going to use (n-c)||
 |choose the images sprites im going to use (n-c)||
 |get the images to xpm (n-c)||
@@ -19,6 +21,7 @@ And thanks for all the fish!
 
 ### XPM MANAGEMENT
 |to-do|status|
+| --- | --- |
 |create the window of the game||
 |establish the right configuration||
 |create the cases of key_hook||
@@ -26,5 +29,6 @@ And thanks for all the fish!
 
 ### IN_GAME EVENTS
 |to-do|status|
+| --- | --- |
 |Clean a cell and put the player in another one if im moving||
 |make the coins disapear if i get them||
