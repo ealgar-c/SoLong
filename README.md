@@ -27,7 +27,7 @@ And thanks for all the fish!
 |create the cases of key_hook||
 |show the images in the window||
 
-### IN_GAME EVENTS
+### IN-GAME EVENTS
 |to-do|status|
 | --- | --- |
 |Clean a cell and put the player in another one if im moving||
