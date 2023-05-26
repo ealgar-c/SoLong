@@ -6,7 +6,7 @@
 /*   By: ealgar-c <ealgar-c@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 14:48:53 by ealgar-c          #+#    #+#             */
-/*   Updated: 2023/05/24 19:16:54 by ealgar-c         ###   ########.fr       */
+/*   Updated: 2023/05/25 10:51:06 by ealgar-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 # define SOLONG_H
 
 # include "../libft/libft.h"
-# include "../mlx/mlx.h"
+// # include "../mlx/mlx.h"
+# include "../mlx_linux/mlx.h"
 # include <fcntl.h>
 
 typedef struct s_mlxvars
