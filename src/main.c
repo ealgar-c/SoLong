@@ -6,13 +6,29 @@
 /*   By: ealgar-c <ealgar-c@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 14:47:40 by ealgar-c          #+#    #+#             */
-/*   Updated: 2023/05/26 10:16:08 by ealgar-c         ###   ########.fr       */
+/*   Updated: 2023/05/30 18:41:02 by ealgar-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/solong.h"
 
-void	ft_print_map(char **map)
+int	main(int argc, char **argv)
+{
+	char	**map;
+	int		fd;
+
+	if (argc != 2)
+	{
+		ft_printf("Error\n");
+		return (0);
+	}
+	fd = open(argv[1], O_RDONLY);
+	map = get_map(fd);
+	print_map(map);
+	create_window(map, ft_strlen(map[1]));
+}
+
+/* void	ft_print_map(char **map)
 {
 	int	i;
 
@@ -28,9 +44,8 @@ int	ft_close(t_mlxvars *mlxvars)
 {
 	mlx_destroy_window(mlxvars->mlx_ptr, mlxvars->window_ptr);
 	exit(0);
-}
-
-int	main(int argc, char **argv)
+} 
+ int	main(int argc, char **argv)
 {
 	t_mlxvars	mlxvars;
 	int			fd;
@@ -67,4 +82,4 @@ int	main(int argc, char **argv)
 	mlx_put_image_to_window(mlxvars.mlx_ptr, mlxvars.window_ptr, isaac_img, 0, 0);
 	mlx_loop(mlxvars.mlx_ptr);
 	mlx_key_hook(mlxvars.window_ptr, &ft_close, &mlxvars);
-}
+} */
