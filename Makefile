@@ -7,7 +7,8 @@ MLX_FLAGS = -Imlx -Lmlx/ -lmlx -framework OpenGL -framework AppKit
 # MLX_LINUX_OFLAGS = -I/usr/include -Imlx_linux -O3
 
 SRC_DIR = src/
-SRC = main.c mapcreation.c windowconfig.c
+SRC = main.c mapcreation.c windowconfig.c ingame.c playermovement.c mapcheck.c\
+	check_walls.c
 OBJ_DIR = objs/
 OBJ = $(addprefix $(OBJ_DIR), $(SRC:.c=.o))
 

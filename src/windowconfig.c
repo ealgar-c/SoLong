@@ -6,79 +6,75 @@
 /*   By: ealgar-c <ealgar-c@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:54:16 by ealgar-c          #+#    #+#             */
-/*   Updated: 2023/05/30 19:52:46 by ealgar-c         ###   ########.fr       */
+/*   Updated: 2023/05/31 18:57:16 by ealgar-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/solong.h"
 
-void	imagestry(void *mlx_ptr, void *window_ptr, int i, int j, void *floor)
+static void	create_imgs(t_solong *gameinfo)
 {
-	int	x;
-	int	y;
+	int	w;
 
-	x = 0;
-	while (x <= i)
-	{
-		y = 0;
-		while (y <= j)
-		{
-			mlx_put_image_to_window(mlx_ptr, window_ptr, floor, y * 64, x * 64);
-			y++;
-		}
-		x++;
-	}
+	w = 64;
+	gameinfo->player = mlx_xpm_file_to_image(gameinfo->mlx_ptr,
+			"sprites/isaac.xpm", &w, &w);
+	gameinfo->floor = mlx_xpm_file_to_image(gameinfo->mlx_ptr,
+			"sprites/floor.xpm", &w, &w);
+	gameinfo->obs = mlx_xpm_file_to_image(gameinfo->mlx_ptr,
+			"sprites/wall.xpm", &w, &w);
+	gameinfo->coin = mlx_xpm_file_to_image(gameinfo->mlx_ptr,
+			"sprites/coin.xpm", &w, &w);
+	gameinfo->exit = mlx_xpm_file_to_image(gameinfo->mlx_ptr,
+			"sprites/door.xpm", &w, &w);
 }
 
-static void	wind_images(void *mlx_ptr, void *window_ptr, int i, int j, char **map)
+static void	img_parser(t_solong *gameinfo, int x, int y)
 {
-	void		*isaac;
-	void		*floor;
-	void		*wall;
-	void		*coin;
-	void		*exit;
-	int			w;
+	mlx_put_image_to_window(gameinfo->mlx_ptr, gameinfo->window_ptr,
+		gameinfo->floor, y * 64, x * 64);
+	if (gameinfo->map[x][y] == 'P')
+	{
+		gameinfo->pl_x = x;
+		gameinfo->pl_y = y;
+		mlx_put_image_to_window(gameinfo->mlx_ptr, gameinfo->window_ptr,
+			gameinfo->player, y * 64, x * 64);
+	}
+	else if (gameinfo->map[x][y] == '1')
+		mlx_put_image_to_window(gameinfo->mlx_ptr, gameinfo->window_ptr,
+			gameinfo->obs, y * 64, x * 64);
+	else if (gameinfo->map[x][y] == 'C')
+		mlx_put_image_to_window(gameinfo->mlx_ptr, gameinfo->window_ptr,
+			gameinfo->coin, y * 64, x * 64);
+	else if (gameinfo->map[x][y] == 'E')
+		mlx_put_image_to_window(gameinfo->mlx_ptr, gameinfo->window_ptr,
+			gameinfo->exit, y * 64, x * 64);
+}
+
+void	wind_images(t_solong *gameinfo)
+{
 	int			x;
 	int			y;
 
 	x = 0;
-	w = 64;
-	isaac = mlx_xpm_file_to_image(mlx_ptr, "sprites/isaac.xpm", &w, &w);
-	floor = mlx_xpm_file_to_image(mlx_ptr, "sprites/floor.xpm", &w, &w);
-	wall = mlx_xpm_file_to_image(mlx_ptr, "sprites/wall.xpm", &w, &w);
-	coin = mlx_xpm_file_to_image(mlx_ptr, "sprites/coin.xpm", &w, &w);
-	exit = mlx_xpm_file_to_image(mlx_ptr, "sprites/door.xpm", &w, &w);
-	while (x < i)
+	create_imgs(gameinfo);
+	while (x < gameinfo->i)
 	{
 		y = 0;
-		while (y < j)
+		while (y < gameinfo->j)
 		{
-			mlx_put_image_to_window(mlx_ptr, window_ptr, floor, y * 64, x * 64);
-			if (map[x][y] == 'P')
-				mlx_put_image_to_window(mlx_ptr, window_ptr, isaac, y * 64, x * 64);
-			else if (map[x][y] == '1')
-				mlx_put_image_to_window(mlx_ptr, window_ptr, wall, y * 64, x * 64);
-			else if (map[x][y] == 'C')
-				mlx_put_image_to_window(mlx_ptr, window_ptr, coin, y * 64, x * 64);
-			else if (map[x][y] == 'E')
-				mlx_put_image_to_window(mlx_ptr, window_ptr, exit, y * 64, x * 64);
+			img_parser(gameinfo, x, y);
 			y++;
 		}
 		x++;
 	}
 }
 
-void	create_window(char **map, int j)
+void	create_window(t_solong *gameinfo)
 {
-	void	*mlx_ptr;
-	void	*window_ptr;
-	int		i;
-
-	i = 1;
-	while (map[i])
-		i++;
-	mlx_ptr = mlx_init();
-	window_ptr = mlx_new_window(mlx_ptr, j * 64, i * 64, "So Long");
-	wind_images(mlx_ptr, window_ptr, i, j, map);
-	mlx_loop(mlx_ptr);
+	gameinfo->mlx_ptr = mlx_init();
+	gameinfo->window_ptr = mlx_new_window(gameinfo->mlx_ptr,
+			gameinfo->j * 64, gameinfo->i * 64, "So Long");
+	wind_images(gameinfo);
+	gameinfo->firstprint = 0;
 }

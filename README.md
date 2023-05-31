@@ -5,10 +5,10 @@ And thanks for all the fish!
 |to-do|status|
 | --- | --- |
 |get the map into a char **| done |
-|check if its a good map:||
+|check if its a good map:| done |
 |check if there is at least one path||
 |check if the player is not trapped||
-|check the map shape||
+|check the map shape| done |
 
 
 ### IMAGES CREATION AND SHOWING
@@ -24,11 +24,11 @@ And thanks for all the fish!
 | --- | --- |
 |create the window of the game| done |
 |establish the right configuration| done |
-|create the cases of key_hook||
+|create the cases of key_hook| done |
 |show the images in the window| done |
 
 ### IN-GAME EVENTS
 |to-do|status|
 | --- | --- |
-|Clean a cell and put the player in another one if im moving||
-|make the coins disapear if i get them||
+|Clean a cell and put the player in another one if im moving| done |
+|make the coins disapear if i get them| done |

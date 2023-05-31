@@ -6,7 +6,7 @@
 /*   By: ealgar-c <ealgar-c@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 14:47:40 by ealgar-c          #+#    #+#             */
-/*   Updated: 2023/05/30 18:41:02 by ealgar-c         ###   ########.fr       */
+/*   Updated: 2023/05/31 18:52:07 by ealgar-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,72 +14,29 @@
 
 int	main(int argc, char **argv)
 {
-	char	**map;
-	int		fd;
-
-	if (argc != 2)
-	{
-		ft_printf("Error\n");
-		return (0);
-	}
-	fd = open(argv[1], O_RDONLY);
-	map = get_map(fd);
-	print_map(map);
-	create_window(map, ft_strlen(map[1]));
-}
-
-/* void	ft_print_map(char **map)
-{
-	int	i;
-
-	i = 0;
-	while (map[i])
-	{
-		ft_printf("%s", map[i]);
-		i++;
-	}
-}
-
-int	ft_close(t_mlxvars *mlxvars)
-{
-	mlx_destroy_window(mlxvars->mlx_ptr, mlxvars->window_ptr);
-	exit(0);
-} 
- int	main(int argc, char **argv)
-{
-	t_mlxvars	mlxvars;
+	t_solong	gameinfo;
 	int			fd;
-	char		**map;
-	int			i;
-	void		*isaac_img;
-	int			width;
-	int			length;
 
-	width = 32;
-	length = 32;
-	i = 0;
 	if (argc != 2)
 	{
-		ft_printf("Error\n");
-		return (0);
+		perror("Error: Numero de argumentos incorrecto.");
+		return (-1);
 	}
 	fd = open(argv[1], O_RDONLY);
-	map = malloc(sizeof(char *) * 5);
 	if (fd == -1)
 	{
-		ft_printf("Error\n");
-		return (0);
+		perror("Error: No se ha podido abrir el fichero.");
+		return (-1);
 	}
-	while (i < 5)
+	gameinfo.map = get_map(fd, &gameinfo);
+	ft_printf("i= %i, j= %i\n", gameinfo.i, gameinfo.j);
+	if (!mapcheck(&gameinfo))
 	{
-		map[i] = get_next_line(fd);
-		i++;
+		perror("Error: El mapa no es correcto.");
+		return (-1);
 	}
-	close(fd);
-	mlxvars.mlx_ptr = mlx_init();
-	mlxvars.window_ptr = mlx_new_window(mlxvars.mlx_ptr, 500, 500, "Hello world!");
-	isaac_img = mlx_xpm_file_to_image(mlxvars.mlx_ptr, "sprites/isaac.xpm", &width, &length);
-	mlx_put_image_to_window(mlxvars.mlx_ptr, mlxvars.window_ptr, isaac_img, 0, 0);
-	mlx_loop(mlxvars.mlx_ptr);
-	mlx_key_hook(mlxvars.window_ptr, &ft_close, &mlxvars);
-} */
+	gameinfo.playermovs = 0;
+	create_window(&gameinfo);
+	manage_loop(&gameinfo);
+	return (0);
+}
