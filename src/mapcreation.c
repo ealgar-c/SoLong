@@ -6,17 +6,21 @@
 /*   By: ealgar-c <ealgar-c@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:44:03 by ealgar-c          #+#    #+#             */
-/*   Updated: 2023/05/31 18:56:25 by ealgar-c         ###   ########.fr       */
+/*   Updated: 2023/06/01 19:13:24 by ealgar-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/solong.h"
 
-char	**get_map(int fd, t_solong *gameinfo)
+/* static void	check_leaks(void)
+{
+	system("leaks -q so_long");
+} */
+
+void	get_map(int fd, t_solong *gameinfo)
 {
 	char	*line;
 	char	*new_line;
-	char	**map;
 
 	line = get_next_line(fd);
 	gameinfo->j = ft_strlen(line) - 1;
@@ -25,10 +29,11 @@ char	**get_map(int fd, t_solong *gameinfo)
 	while (new_line)
 	{
 		line = ft_strjoin(line, new_line);
+		free(new_line);
 		new_line = get_next_line(fd);
 		gameinfo->i++;
 	}
-	map = malloc(gameinfo->i * sizeof(char *));
-	map = ft_split(line, '\n');
-	return (map);
+	free(new_line);
+	free(line);
+	gameinfo->map = ft_split(line, '\n');
 }

@@ -6,11 +6,10 @@
 /*   By: ealgar-c <ealgar-c@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 10:18:03 by ealgar-c          #+#    #+#             */
-/*   Updated: 2023/05/20 21:08:29 by ealgar-c         ###   ########.fr       */
+/*   Updated: 2023/06/01 18:27:43 by ealgar-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static int	ft_cntwords(char const *s, char c)
@@ -32,10 +31,18 @@ static int	ft_cntwords(char const *s, char c)
 	return (count);
 }
 
-static void	ft_free(char **str, int str_ind)
+static void	ft_free(char **str)
 {
-	while (str_ind-- > 0)
-		free(str[str_ind]);
+	char	**ptr;
+
+	if (!str)
+		return ;
+	ptr = str;
+	while (*ptr)
+	{
+		free(*ptr);
+		ptr++;
+	}
 	free(str);
 }
 
@@ -58,23 +65,23 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		str_ind;
 
-	i = 0;
 	str_ind = -1;
-	str = malloc(sizeof(char *) * (ft_cntwords (s, c) + 1));
+	i = 0;
+	str = malloc(sizeof(char *) * (ft_cntwords(s, c) + 1));
 	if (!str)
-		return (0);
-	while (++str_ind < ft_cntwords (s, c))
+		return (NULL);
+	while (++str_ind < ft_cntwords(s, c))
 	{
 		while (s[i] == c)
 			i++;
 		str[str_ind] = ft_substr(s, i, ft_wordlen(s, c, i));
 		if (!(str[str_ind]))
 		{
-			ft_free(str, str_ind);
-			return (0);
+			ft_free(str);
+			return (NULL);
 		}
 		i += ft_wordlen(s, c, i);
 	}
-	str[str_ind] = 0;
+	str[str_ind] = NULL;
 	return (str);
 }

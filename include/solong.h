@@ -6,7 +6,7 @@
 /*   By: ealgar-c <ealgar-c@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 14:48:53 by ealgar-c          #+#    #+#             */
-/*   Updated: 2023/05/31 18:56:36 by ealgar-c         ###   ########.fr       */
+/*   Updated: 2023/06/01 16:03:16 by ealgar-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include "../libft/libft.h"
 # include "../mlx/mlx.h"
-// # include "../mlx_linux/mlx.h"
 # include <fcntl.h>
 # include <stdio.h>
 # include <stdlib.h>
@@ -43,11 +42,11 @@ typedef struct s_solong
 	int		pl_x;
 	int		pl_y;
 	int		c_to_get;
-	int		firstprint;
 	int		playermovs;
+	int		ecount;
 }	t_solong;
 
-char	**get_map(int fd, t_solong *gameinfo);
+void	get_map(int fd, t_solong *gameinfo);
 void	create_window(t_solong *gameinfo);
 void	manage_loop(t_solong *gameinfo);
 void	wind_images(t_solong *gameinfo);
@@ -57,4 +56,6 @@ void	s_movement(t_solong *gameinfo);
 void	d_movement(t_solong *gameinfo);
 bool	mapcheck(t_solong *gameinfo);
 bool	check_walls(t_solong *gameinfo);
+bool	check_path(t_solong *gameinfo);
+int		close_game(t_solong *gameinfo);
 #endif

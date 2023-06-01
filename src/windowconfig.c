@@ -6,7 +6,7 @@
 /*   By: ealgar-c <ealgar-c@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:54:16 by ealgar-c          #+#    #+#             */
-/*   Updated: 2023/05/31 18:57:16 by ealgar-c         ###   ########.fr       */
+/*   Updated: 2023/06/01 12:01:13 by ealgar-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,4 @@ void	create_window(t_solong *gameinfo)
 	gameinfo->window_ptr = mlx_new_window(gameinfo->mlx_ptr,
 			gameinfo->j * 64, gameinfo->i * 64, "So Long");
 	wind_images(gameinfo);
-	gameinfo->firstprint = 0;
 }

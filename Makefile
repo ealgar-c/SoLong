@@ -3,12 +3,10 @@ CC = cc
 FLAGS = -Wall -Wextra -Werror
 RM = rm -f
 MLX_FLAGS = -Imlx -Lmlx/ -lmlx -framework OpenGL -framework AppKit
-# MLX_LINUX_FLAGS = -Lmlx_linux -lmlx_Linux -L/usr/lib -Imlx_linux -lXext -lX11 -lm -lz
-# MLX_LINUX_OFLAGS = -I/usr/include -Imlx_linux -O3
 
 SRC_DIR = src/
 SRC = main.c mapcreation.c windowconfig.c ingame.c playermovement.c mapcheck.c\
-	check_walls.c
+	check_walls.c pathcheck.c
 OBJ_DIR = objs/
 OBJ = $(addprefix $(OBJ_DIR), $(SRC:.c=.o))
 
