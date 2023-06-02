@@ -6,11 +6,21 @@
 /*   By: ealgar-c <ealgar-c@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 14:47:40 by ealgar-c          #+#    #+#             */
-/*   Updated: 2023/06/01 13:37:09 by ealgar-c         ###   ########.fr       */
+/*   Updated: 2023/06/02 15:13:03 by ealgar-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/solong.h"
+
+/* void printmap(char **map)
+{
+	int i = 0;
+	while (map[i])
+	{
+		ft_printf("%s\n", map[i]);
+		i++;
+	}
+} */
 
 int	main(int argc, char **argv)
 {

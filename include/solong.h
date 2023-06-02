@@ -6,7 +6,7 @@
 /*   By: ealgar-c <ealgar-c@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/23 14:48:53 by ealgar-c          #+#    #+#             */
-/*   Updated: 2023/06/01 16:03:16 by ealgar-c         ###   ########.fr       */
+/*   Updated: 2023/06/02 15:27:56 by ealgar-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ typedef struct s_solong
 	int		c_to_get;
 	int		playermovs;
 	int		ecount;
+	int		acc_e;
 }	t_solong;
 
 void	get_map(int fd, t_solong *gameinfo);
@@ -58,4 +59,5 @@ bool	mapcheck(t_solong *gameinfo);
 bool	check_walls(t_solong *gameinfo);
 bool	check_path(t_solong *gameinfo);
 int		close_game(t_solong *gameinfo);
+void	free_maps(char **map);
 #endif

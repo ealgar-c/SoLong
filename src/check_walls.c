@@ -6,7 +6,7 @@
 /*   By: ealgar-c <ealgar-c@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/31 18:22:48 by ealgar-c          #+#    #+#             */
-/*   Updated: 2023/05/31 18:33:31 by ealgar-c         ###   ########.fr       */
+/*   Updated: 2023/06/02 15:25:55 by ealgar-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,11 +74,10 @@ static bool	last_col(t_solong *gameinfo)
 
 bool	check_walls(t_solong *gameinfo)
 {
-	bool	checker;
-
-	checker = top_row(gameinfo);
-	checker = bot_row(gameinfo);
-	checker = first_col(gameinfo);
-	checker = last_col(gameinfo);
-	return (true);
+	if (top_row(gameinfo))
+		if (bot_row(gameinfo))
+			if (first_col(gameinfo))
+				if (last_col(gameinfo))
+					return (true);
+	return (false);
 }
