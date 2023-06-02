@@ -6,8 +6,8 @@ And thanks for all the fish!
 | --- | --- |
 |get the map into a char **| done |
 |check if its a good map:| done |
-|check if there is at least one path||
-|check if the player is not trapped||
+|check if there is at least one path| done |
+|check if the player is not trapped| done |
 |check the map shape| done |
 
 
