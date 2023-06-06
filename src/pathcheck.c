@@ -6,7 +6,7 @@
 /*   By: ealgar-c <ealgar-c@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/01 10:59:00 by ealgar-c          #+#    #+#             */
-/*   Updated: 2023/06/02 15:28:13 by ealgar-c         ###   ########.fr       */
+/*   Updated: 2023/06/06 15:23:10 by ealgar-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,8 @@ bool	check_path(t_solong *gameinfo)
 	int		y;
 	int		coins;
 
-	map_cpy = map_flood(map_copy(gameinfo), gameinfo->pl_x + 1,
-			gameinfo->pl_y + 1);
+	map_cpy = map_flood(map_copy(gameinfo), gameinfo->pl_x,
+			gameinfo->pl_y);
 	x = -1;
 	gameinfo->acc_e = 0;
 	coins = 0;
@@ -79,7 +79,6 @@ bool	check_path(t_solong *gameinfo)
 				coins++;
 		}
 	}
-	free_maps(map_cpy);
 	if (gameinfo->acc_e == 1 && coins == gameinfo->c_to_get)
 		return (true);
 	return (false);

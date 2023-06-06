@@ -6,7 +6,7 @@
 /*   By: ealgar-c <ealgar-c@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 17:54:16 by ealgar-c          #+#    #+#             */
-/*   Updated: 2023/06/01 12:01:13 by ealgar-c         ###   ########.fr       */
+/*   Updated: 2023/06/06 15:06:19 by ealgar-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,8 @@ static void	img_parser(t_solong *gameinfo, int x, int y)
 	mlx_put_image_to_window(gameinfo->mlx_ptr, gameinfo->window_ptr,
 		gameinfo->floor, y * 64, x * 64);
 	if (gameinfo->map[x][y] == 'P')
-	{
-		gameinfo->pl_x = x;
-		gameinfo->pl_y = y;
 		mlx_put_image_to_window(gameinfo->mlx_ptr, gameinfo->window_ptr,
 			gameinfo->player, y * 64, x * 64);
-	}
 	else if (gameinfo->map[x][y] == '1')
 		mlx_put_image_to_window(gameinfo->mlx_ptr, gameinfo->window_ptr,
 			gameinfo->obs, y * 64, x * 64);
