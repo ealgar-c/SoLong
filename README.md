@@ -1,8 +1,9 @@
 <div align="center">
 	<h1> So_Long</h1>
 	<p>And thanks for all the fish!</p>
-	<img src="https://img.shields.io/badge/norminette-passing-success"/>
-	<img src="https://img.shields.io/badge/-100%2F100-important?logo=42&logoColor=fff" />
+	<img src="https://img.shields.io/badge/norme-OK-success?style=flat-square"/>
+	<img src="https://img.shields.io/badge/leaks-CLEAR-success?style=flat-square"/>
+	<img src="https://img.shields.io/badge/-100%2F100-important?style=flat-square&logo=42&logoColor=000" />
 </div>
 
 <h2 align="center"> PROYECT TREE </h2>
