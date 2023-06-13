@@ -1,6 +1,48 @@
 # SoLong
 And thanks for all the fish!
 
+<h3 text-align="center"> proyect tree </h3>
+'''
+.
+├── Makefile
+├── README.md
+├── include
+│   └── solong.h
+├── libft
+├── maps
+│   ├── errors
+│   │   ├── map_barriertest.ber
+│   │   ├── map_counttest.ber
+│   │   ├── map_pathtest.ber
+│   │   └── map_shapetest.ber
+│   ├── map1.ber
+│   ├── map2.ber
+│   └── map_medium.ber
+├── mlx
+├── objs
+├── sprites
+│   ├── coin.png
+│   ├── coin.xpm
+│   ├── door.png
+│   ├── door.xpm
+│   ├── floor.png
+│   ├── floor.xpm
+│   ├── isaac.png
+│   ├── isaac.xpm
+│   ├── wall.png
+│   └── wall.xpm
+└── src
+    ├── check_walls.c
+    ├── ingame.c
+    ├── main.c
+    ├── mapcheck.c
+    ├── mapcreation.c
+    ├── pathcheck.c
+    ├── playermovement.c
+    └── windowconfig.c
+´´´
+
+
 ### MAP HANDLING
 |to-do|status|
 | --- | --- |
@@ -32,3 +74,9 @@ And thanks for all the fish!
 | --- | --- |
 |Clean a cell and put the player in another one if im moving| done |
 |make the coins disapear if i get them| done |
+
+### FINAL PART
+|to-do|status|
+| --- | --- |
+| Check everything passes norminette | done |
+| Check there are no leaks | done |
