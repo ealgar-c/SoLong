@@ -5,7 +5,7 @@
 	<br />
 	<img src="https://img.shields.io/badge/norme-OK-success?style=flat"/>
 	<img src="https://img.shields.io/badge/leaks-CLEAR-success?style=flat"/>
-	<img src="https://img.shields.io/badge/-100%2F100-inactive?style=flat&logo=42&logoColor=000" />
+	<img src="https://img.shields.io/badge/-100%2F100-success?style=flat&logo=42&logoColor=000" />
 </div>
 
 <h2 align="center">📜 PROYECT DESCRIPTION 📜</h2>
@@ -58,6 +58,7 @@ El proyecto So_Long consiste en la creación un programa en C que sea capaz de c
 <h2 align="center">🚶🏻‍♂️ PROYECT ROADMAP 🚶</h2>
 
 <h3 align="center">🗺 MAP HANDLING</h3>
+
 *  Take the map and create a vector of it
 *  Check the map shape
 *  Check if it's a good map
@@ -65,23 +66,27 @@ El proyecto So_Long consiste en la creación un programa en C que sea capaz de c
 *  Check if the player is not trapped
 
 <h3 align="center">🖼 IMAGES CREATION AND SHOWING</h3>
+
 *  Choose a theme
 *  Search the images and convert them to xpm with the right size
 *  Take each xpm file and convert them to images that mlx can show on a window
 
 <h3 align="center">🤡 MINILIBX MANAGEMENT</h3>
+
 *  Create the game window
 *  Establish the right configuration for the window
 *  Show images in the game window
 *  Implement key_hook cases for player movement and closing the window
 
 <h3 align="center">🕹 IN-GAME EVENTS</h3>
+
 *  Implement logic for player movement within the map
 *  Allow the player to collect objects placed on the map
 *  Keep track of the number of collected objects
 *  Keep track of the number of movements
 
 <h3 align="center">🥬 EXTRA THINGS TO CONSIDER</h3>
+
 *  Ensure proper memory deallocation
 *  Check that everyting passes norminette
 *  Create the Makefile and make sure it doesnt relink
