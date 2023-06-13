@@ -1,6 +1,19 @@
 # SoLong
 And thanks for all the fish!
 
+<div align="center">
+	<h1> So_Long</h1>
+	<p>And thanks for all the fish!</p>
+    <br />
+	<img src="https://img.shields.io/badge/norminette-passing-success"/>
+	<a href="https://developer.apple.com/library/archive/documentation/Performance/Conceptual/ManagingMemory/Articles/FindingLeaks.html"><img src="https://img.shields.io/badge/leaks-none-success" /></a>
+	<img src="https://img.shields.io/badge/bonus-not∞%2Fincluded-failure"/>
+	<br />
+	<img src="https://img.shields.io/badge/-100%2F100-important?logo=42&logoColor=fff" />
+</div>
+
+<img src="https://img.shields.io/badge/-100%2F100-important?logo=42&logoColor=fff" />
+
 <h3 text-align="center"> proyect tree </h3>
 
 ```
