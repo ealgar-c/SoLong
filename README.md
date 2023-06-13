@@ -18,11 +18,11 @@ El proyecto So_Long consiste en la creación un programa en C que sea capaz de c
 .
 ├── Makefile
 ├── README.md
-├── include
+├── include/
 │   └── solong.h
-├── libft
-├── maps
-│   ├── errors
+├── libft/
+├── maps/
+│   ├── errors/
 │   │   ├── map_barriertest.ber
 │   │   ├── map_counttest.ber
 │   │   ├── map_pathtest.ber
@@ -30,9 +30,9 @@ El proyecto So_Long consiste en la creación un programa en C que sea capaz de c
 │   ├── map1.ber
 │   ├── map2.ber
 │   └── map_medium.ber
-├── mlx
-├── objs
-├── sprites
+├── mlx/
+├── objs/
+├── sprites/
 │   ├── coin.png
 │   ├── coin.xpm
 │   ├── door.png
@@ -43,7 +43,7 @@ El proyecto So_Long consiste en la creación un programa en C que sea capaz de c
 │   ├── isaac.xpm
 │   ├── wall.png
 │   └── wall.xpm
-└── src
+└── src/
     ├── check_walls.c
     ├── ingame.c
     ├── main.c
