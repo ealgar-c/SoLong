@@ -9,7 +9,7 @@
 	<img src="https://img.shields.io/badge/-100%2F100-important?logo=42&logoColor=fff" />
 </div>
 
-<h3 align="center"> proyect tree </h3>
+<h3 align="center"> PROYECT TREE </h3>
 
 ```
 .
@@ -53,42 +53,32 @@
 ```
 
 
-## PROYECT ROADMAP
+<h2 align="center"> PROYECT ROADMAP </h2>
 
-### MAP HANDLING
-|to-do|status|
-| --- | --- |
-|get the map into a char **| done |
-|check if its a good map:| done |
-|check if there is at least one path| done |
-|check if the player is not trapped| done |
-|check the map shape| done |
+MAP HANDLING
+*  Get the map into a char **
+*  Check if it's a good map
+*  Check if there is at least one path
+*  Check if the player is not trapped
+*  Check the map shape
 
-### IMAGES CREATION AND SHOWING
-|to-do|status|
-| --- | --- |
-|choose the theme im going to use (n-c)| done |
-|choose the images sprites im going to use (n-c)| done |
-|get the images to xpm (n-c)| done |
-|create void * to each xpm file of the game| done |
+IMAGES CREATION AND SHOWING
+*  Choose the theme I'm going to use (n-c)
+*  Choose the image sprites I'm going to use (n-c)
+*  Get the images to xpm (n-c)
+*  Create void * to each xpm file of the game
 
-### XPM MANAGEMENT
-|to-do|status|
-| --- | --- |
-|create the window of the game| done |
-|establish the right configuration| done |
-|create the cases of key_hook| done |
-|show the images in the window| done |
+XPM MANAGEMENT
+*  Create the window of the game
+*  Establish the right configuration
+*  Create the cases of key_hook
+*  Show the images in the window
 
-### IN-GAME EVENTS
-|to-do|status|
-| --- | --- |
-| Create different functions for each movement key | done |
-| Clean a cell and put the player in another one if im moving | done |
-| have a coin counter so I know how much do i need in order to finish | done |
+IN-GAME EVENTS
+*  Create different functions for each movement key
+*  Clean a cell and put the player in another one if I'm moving
+*  Have a coin counter so I know how much I need in order to finish
 
-### FINAL PART
-|to-do|status|
-| --- | --- |
-| Check everything passes norminette | done |
-| Check there are no leaks | done |
+FINAL PART
+*  Check everything passes norminette
+*  Check there are no leaks
