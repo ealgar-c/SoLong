@@ -2,7 +2,7 @@
 And thanks for all the fish!
 
 <h3 text-align="center"> proyect tree </h3>
-'''
+```
 .
 ├── Makefile
 ├── README.md
@@ -40,7 +40,7 @@ And thanks for all the fish!
     ├── pathcheck.c
     ├── playermovement.c
     └── windowconfig.c
-´´´
+```
 
 
 ### MAP HANDLING
