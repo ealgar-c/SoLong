@@ -1,7 +1,6 @@
 <div align="center">
 	<h1> So_Long</h1>
 	<p>And thanks for all the fish!</p>
-    <br />
 	<img src="https://img.shields.io/badge/norminette-passing-success"/>
 	<img src="https://img.shields.io/badge/-100%2F100-important?logo=42&logoColor=fff" />
 </div>
