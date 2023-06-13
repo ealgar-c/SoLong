@@ -3,9 +3,6 @@
 	<p>And thanks for all the fish!</p>
     <br />
 	<img src="https://img.shields.io/badge/norminette-passing-success"/>
-	<a href="https://developer.apple.com/library/archive/documentation/Performance/Conceptual/ManagingMemory/Articles/FindingLeaks.html"><img src="https://img.shields.io/badge/leaks-none-success" /></a>
-	<img src="https://img.shields.io/badge/bonus-not%2Fincluded-failure"/>
-	<br />
 	<img src="https://img.shields.io/badge/-100%2F100-important?logo=42&logoColor=fff" />
 </div>
 
@@ -54,7 +51,6 @@
 
 
 <h2 align="center"> PROYECT ROADMAP </h2>
-
 <h3 align="center">MAP HANDLING</h3>
 
 *  Get the map into a char **
