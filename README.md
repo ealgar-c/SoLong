@@ -1,20 +1,15 @@
-# SoLong
-And thanks for all the fish!
-
 <div align="center">
 	<h1> So_Long</h1>
 	<p>And thanks for all the fish!</p>
     <br />
 	<img src="https://img.shields.io/badge/norminette-passing-success"/>
 	<a href="https://developer.apple.com/library/archive/documentation/Performance/Conceptual/ManagingMemory/Articles/FindingLeaks.html"><img src="https://img.shields.io/badge/leaks-none-success" /></a>
-	<img src="https://img.shields.io/badge/bonus-not∞%2Fincluded-failure"/>
+	<img src="https://img.shields.io/badge/bonus-not%2Fincluded-failure"/>
 	<br />
 	<img src="https://img.shields.io/badge/-100%2F100-important?logo=42&logoColor=fff" />
 </div>
 
-<img src="https://img.shields.io/badge/-100%2F100-important?logo=42&logoColor=fff" />
-
-<h3 text-align="center"> proyect tree </h3>
+<h3 align="center"> proyect tree </h3>
 
 ```
 .
@@ -58,6 +53,8 @@ And thanks for all the fish!
 ```
 
 
+## PROYECT ROADMAP
+
 ### MAP HANDLING
 |to-do|status|
 | --- | --- |
@@ -66,7 +63,6 @@ And thanks for all the fish!
 |check if there is at least one path| done |
 |check if the player is not trapped| done |
 |check the map shape| done |
-
 
 ### IMAGES CREATION AND SHOWING
 |to-do|status|
@@ -87,8 +83,9 @@ And thanks for all the fish!
 ### IN-GAME EVENTS
 |to-do|status|
 | --- | --- |
-|Clean a cell and put the player in another one if im moving| done |
-|make the coins disapear if i get them| done |
+| Create different functions for each movement key | done |
+| Clean a cell and put the player in another one if im moving | done |
+| have a coin counter so I know how much do i need in order to finish | done |
 
 ### FINAL PART
 |to-do|status|
