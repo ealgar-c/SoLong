@@ -6,7 +6,7 @@
 	<img src="https://img.shields.io/badge/-100%2F100-important?logo=42&logoColor=fff" />
 </div>
 
-<h3 align="center"> PROYECT TREE </h3>
+<h2 align="center"> PROYECT TREE </h2>
 
 ```
 .
